@@ -5,6 +5,7 @@ let router = express.Router();
 const ejemplos = require('../controllers/ejemplo.controller.js');
 const usuarios = require('../controllers/usuario.controller.js');
 const proyectos = require('../controllers/proyecto.controller.js');
+const tareas = require('../controllers/tarea.controller.js');
 
 router.post('/api/ejemplos/create', ejemplos.create);
 router.get('/api/ejemplos/all', ejemplos.retrieveAllEjemplos);
@@ -26,6 +27,13 @@ router.get('/api/proyectos/buscar/:nombre', proyectos.getProyectoByName);
 router.get('/api/proyectos/onebyid/:id', proyectos.getProyectoById);
 router.put('/api/proyectos/update/:id', proyectos.updateById);
 router.delete('/api/proyectos/delete/:id', proyectos.deleteById);
+
+router.post('/api/tareas/create', tareas.create);
+router.get('/api/tareas/all', tareas.retrieveAllTareas);
+router.get('/api/tareas/buscar/:nombre', tareas.getTareaByName);
+router.get('/api/tareas/onebyid/:id', tareas.getTareaById);
+router.put('/api/tareas/update/:id', tareas.updateById);
+router.delete('/api/tareas/delete/:id', tareas.deleteById);
 
 module.exports = router;
 
