@@ -35,7 +35,7 @@ router.get('/api/tareas/onebyid/:id', tareas.getTareaById);
 router.put('/api/tareas/update/:id', tareas.updateById);
 router.delete('/api/tareas/delete/:id', tareas.deleteById);
 
-module.exports = router;
+module.exports = router;//A
 
 
 
