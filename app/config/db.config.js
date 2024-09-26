@@ -10,7 +10,7 @@ const sequelize = new Sequelize(env.database, env.username, env.password, {
       rejectUnauthorized: false
     }
   },
-  //operatorsAliases: false,
+
  
   pool: {
     max: env.max,
@@ -25,7 +25,8 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
  
-//tabla usuario
+
 db.Ejemplo = require('../models/ejemplo.model.js')(sequelize, Sequelize);
 db.Usuario = require('../models/usuarios.model.js')(sequelize, Sequelize);
+db.Proyecto = require('../models/proyecto.model.js')(sequelize, Sequelize);
 module.exports = db;

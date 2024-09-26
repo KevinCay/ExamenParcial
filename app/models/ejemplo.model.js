@@ -23,8 +23,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         fecha_ingreso: {
             type: Sequelize.DATE
-            //type: Sequelize.DATEONLY  Cambiado a DATEONLY para guardar solo la fecha
-            //defaultValue: Sequelize.NOW   Establece la fecha actual como valor predeterminado
+           
         },
         estado: {
             type: Sequelize.INTEGER
