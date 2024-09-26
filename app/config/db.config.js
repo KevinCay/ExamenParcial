@@ -27,5 +27,5 @@ db.sequelize = sequelize;
  
 //tabla usuario
 db.Ejemplo = require('../models/ejemplo.model.js')(sequelize, Sequelize);
-
+db.Usuario = require('../models/usuarios.model.js')(sequelize, Sequelize);
 module.exports = db;
